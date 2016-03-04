@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SU1-Aj-3hw">
+                                <rect key="frame" x="285" y="285" width="30" height="30"/>
+                                <state key="normal" title="开始"/>
+                                <connections>
+                                    <action selector="onClickStart:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fyt-ot-3KZ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L4v-Do-ZeI">
+                                <rect key="frame" x="285" y="331" width="30" height="30"/>
+                                <state key="normal" title="暂停"/>
+                                <connections>
+                                    <action selector="onClickPause:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rw3-TK-fi3"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="记时器" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eXz-l4-9ZJ">
+                                <rect key="frame" x="275" y="237" width="51" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="L4v-Do-ZeI" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="3hw-qv-NUw"/>
+                            <constraint firstItem="SU1-Aj-3hw" firstAttribute="top" secondItem="eXz-l4-9ZJ" secondAttribute="bottom" constant="27" id="51i-3h-7eE"/>
+                            <constraint firstItem="SU1-Aj-3hw" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Ajw-W7-Hat"/>
+                            <constraint firstItem="eXz-l4-9ZJ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="KSJ-rO-KMX"/>
+                            <constraint firstItem="L4v-Do-ZeI" firstAttribute="top" secondItem="SU1-Aj-3hw" secondAttribute="bottom" constant="16" id="MAr-oy-0v7"/>
+                            <constraint firstItem="SU1-Aj-3hw" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Pvj-sV-Kln"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="timerLabel" destination="eXz-l4-9ZJ" id="bKx-uu-8lw"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
